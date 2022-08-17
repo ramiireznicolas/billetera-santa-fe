@@ -1,0 +1,207 @@
+:root {
+  --background-color-blue: #00558c;
+  --background-color-red: #cf2e2e
+;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body img {
+  max-width: 200px;
+}
+
+body .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .form input[type=number],
+body .form input[type=password],
+body .form select {
+  width: 280px;
+  height: 30px;
+  margin: 0 auto 20px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+body .form input {
+  line-height: 28px;
+  border: 2px solid transparent;
+  padding: .2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: #0d0c22;
+  -webkit-transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+body .form input:focus, body .form input:hover {
+  outline: none;
+  padding: .2rem 1rem;
+  border-radius: 1rem;
+  border-color: #7a9cc6;
+}
+
+body .form input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+body .form input:focus:-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+body .form input:focus::-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+body .form input:focus::placeholder {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+body .form a {
+  text-decoration: none;
+  color: var(--background-color-blue);
+  width: 180px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+body .form .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+body .form .check .container {
+  display: block;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  position: relative;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+
+body .form .check .container input {
+  position: absolute;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  margin-bottom: 10px;
+}
+
+body .form .check .container input:checked ~ .checkmark {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 15px;
+  width: 4px;
+  border-color: #32cd32;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-radius: 0;
+  margin-left: 10px;
+}
+
+body .form .check .container .checkmark {
+  display: block;
+  width: inherit;
+  height: inherit;
+  border: 2px solid #434343;
+  border-radius: 4px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  margin-bottom: 10px;
+}
+
+body .form .btn {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: 3px;
+  height: 2.5em;
+  padding: 0 3em;
+  border: none;
+  background-color: var(--background-color-blue);
+  color: white;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 5px;
+  width: 280px;
+  cursor: pointer;
+}
+
+body .form .btn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 280px;
+  background: white;
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #00558c), to(#cf2e2e));
+  background: linear-gradient(90deg, #00558c 20%, #cf2e2e 100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin: auto;
+}
+
+body .form .btn .label {
+  position: relative;
+}
+
+body .form .btn .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  top: 4em;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+body .form .btn:hover::before {
+  height: 100%;
+}
+
+body .form .btn:hover .icon {
+  top: 0;
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

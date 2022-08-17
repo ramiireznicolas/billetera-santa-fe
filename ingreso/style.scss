@@ -1,0 +1,88 @@
+:root{
+    --background-color-blue: #00558c;
+    --button-blue: rgb(1, 35, 189);
+    --button-blue-qr: rgb(34, 150, 218);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    position: absolute;
+    right: 1px;
+    margin: 15px;
+    i{
+        font-size: 25px;
+        color: white;
+    }
+}
+.dinero{
+    background-color: var(--background-color-blue);
+    width: 100%;
+    h1{
+        color: white;
+        font-size: 1em;
+        padding: 15px 0px 0px 15px;
+    }
+    h2{
+        color: white;
+        padding: 5px 0px 0px 15px;
+    }
+    .cajero{
+        padding: 15px;
+        button{
+            width: 100px;
+            height: 35px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border-color: var(--button-blue);
+            background-color: var(--button-blue);
+            font-size: 0.9em;
+            color: white;
+        }
+    }
+}
+.qr{
+    position: absolute;
+    top: 160px;
+    display: flex;
+    padding: 0px 0px 0px 15px;
+    button{
+        max-height: 70px;
+        margin-right: 20px;
+        width: 80px;
+        border-radius: 5px;
+        border-color: var(--button-blue-qr);
+        background-color: var(--button-blue-qr);
+        font-size: 0.9em;
+        color: white;
+    }
+}
+
+h3{
+    margin: 75px 15px 10px;
+}
+.pagos{
+    margin-left: 15px;
+    width: 320px;
+    overflow: scroll;
+    position: relative;
+    scroll-snap-type: x mandatory;
+    .servicios{
+        display: flex;
+        width: 500px;
+        button{
+            float: left;
+            height: 50px;
+            width: 100px;
+            border-radius: 5px;
+            border-color: var(--button-blue-qr);
+            background-color: var(--button-blue-qr);
+            font-size: 0.9em;
+            color: white;
+            margin-right: 20px;
+            scroll-snap-align: start;
+        }
+    }
+}

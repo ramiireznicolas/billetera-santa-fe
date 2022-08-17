@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title>Billetera Santa Fé</title>
+</head>
+
+<body>
+    <img src="./assets/pluspago.png" alt="logoPlusPago">
+    <div class="form">
+        <input type="number" name="dni" placeholder="DNI">
+        <input type="password" name="password" placeholder="Contraseña">
+
+        <select name="genero">
+            <option value="femenino">Femenino</option>
+            <option value="masculino">Masculino</option>
+        </select>
+
+        <div class="check">
+            Recordar Contraseña
+            <label class="container">
+                <input checked="checked" type="checkbox">
+                <div class="checkmark"></div>
+            </label>
+        </div>
+
+
+        <a href="#">¿Olvidaste tú contraseña?</a>
+
+        <button onClick="window.open('./ingreso/ingreso.html','_top')" class="btn iniciar" id="iniciar">
+            <span class="label">Iniciar Sesión</span>
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor"
+                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                </svg>
+            </span>
+        </button>
+
+        <button class="btn" id="registrarse">
+            <span class="label">Registrarse</span>
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor"
+                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                </svg>
+            </span>
+        </button>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
