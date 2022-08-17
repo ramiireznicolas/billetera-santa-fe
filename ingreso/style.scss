@@ -1,37 +1,166 @@
-:root{
+:root {
     --background-color-blue: #00558c;
     --button-blue: rgb(1, 35, 189);
-    --button-blue-qr: rgb(34, 150, 218);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.nav{
+
+//!menu hamburguesa
+.main-header {
+    height: 50px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color-blue);
+    padding: 0 0.4rem;
     position: absolute;
-    right: 1px;
-    margin: 15px;
-    i{
-        font-size: 25px;
-        color: white;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+.main-nav.show {
+    margin-left: 0;
+}
+
+.nav-links {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    img{
+        width: 60px;
+        margin: 50px 0 40px 0;
     }
 }
-.dinero{
+
+.link-item {
+    margin-top: 2rem;
+    color: #444444;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.link-item::after {
+    position: absolute;
+    content: "";
+    background-color: black;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: 0.3s ease all;
+}
+
+.link-item:hover::after {
+    width: 100%;
+}
+
+.button-menu {
+    width: 100%;
+    height: 30px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    align-items: flex-end;
+    justify-content: end;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.button-menu span {
+    width: 30px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: white;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+    z-index: 100;
+}
+
+.button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #ffffff;
+}
+
+.button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+.button-menu.close span:nth-child(3) {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .button-menu {
+        display: none;
+    }
+
+    .main-nav {
+        position: static;
+        margin-left: 0;
+        flex-basis: 70%;
+        height: 100%;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        background: white;
+    }
+
+    .link-item {
+        display: inline-block;
+        margin-top: 0;
+        margin-right: 2rem;
+    }
+}
+//! fin menu hamburguesa
+
+.dinero {
     background-color: var(--background-color-blue);
     width: 100%;
-    h1{
+
+    h1 {
         color: white;
         font-size: 1em;
         padding: 15px 0px 0px 15px;
+        position: relative;
     }
-    h2{
+
+    h2 {
         color: white;
         padding: 5px 0px 0px 15px;
     }
-    .cajero{
+
+    .cajero {
         padding: 15px;
-        button{
+
+        button {
             width: 100px;
             height: 35px;
             margin-right: 10px;
@@ -43,42 +172,47 @@
         }
     }
 }
-.qr{
+
+.qr {
     position: absolute;
     top: 160px;
     display: flex;
     padding: 0px 0px 0px 15px;
-    button{
+
+    button {
         max-height: 70px;
         margin-right: 20px;
         width: 80px;
         border-radius: 5px;
-        border-color: var(--button-blue-qr);
-        background-color: var(--button-blue-qr);
+        border-color: var(--background-color-blue);
+        background-color: var(--background-color-blue);
         font-size: 0.9em;
         color: white;
     }
 }
 
-h3{
+h3 {
     margin: 75px 15px 10px;
 }
-.pagos{
+
+.pagos {
     margin-left: 15px;
     width: 320px;
     overflow: scroll;
     position: relative;
     scroll-snap-type: x mandatory;
-    .servicios{
+
+    .servicios {
         display: flex;
         width: 500px;
-        button{
+
+        button {
             float: left;
             height: 50px;
             width: 100px;
             border-radius: 5px;
-            border-color: var(--button-blue-qr);
-            background-color: var(--button-blue-qr);
+            border-color: var(--background-color-blue);
+            background-color: var(--background-color-blue);
             font-size: 0.9em;
             color: white;
             margin-right: 20px;

@@ -1,7 +1,6 @@
 :root {
   --background-color-blue: #00558c;
   --button-blue: rgb(1, 35, 189);
-  --button-blue-qr: rgb(34, 150, 218);
 }
 
 * {
@@ -9,15 +8,172 @@
   padding: 0;
 }
 
-.nav {
+.main-header {
+  height: 50px;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--background-color-blue);
+  padding: 0 0.4rem;
   position: absolute;
-  right: 1px;
-  margin: 15px;
 }
 
-.nav i {
-  font-size: 25px;
-  color: white;
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  margin-left: -100%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.main-nav.show {
+  margin-left: 0;
+}
+
+.nav-links {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.nav-links img {
+  width: 60px;
+  margin: 50px 0 40px 0;
+}
+
+.link-item {
+  margin-top: 2rem;
+  color: #444444;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+}
+
+.link-item::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+.link-item:hover::after {
+  width: 100%;
+}
+
+.button-menu {
+  width: 100%;
+  height: 30px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.button-menu span {
+  width: 30px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  z-index: 100;
+}
+
+.button-menu.close span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(0px, 0px);
+          transform: rotate(45deg) translate(0px, 0px);
+  background: #ffffff;
+}
+
+.button-menu.close span:nth-child(2) {
+  -webkit-transform: rotate(-45deg) translate(-8px, 5px);
+          transform: rotate(-45deg) translate(-8px, 5px);
+}
+
+.button-menu.close span:nth-child(3) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+  .main-nav {
+    position: static;
+    margin-left: 0;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    height: 100%;
+  }
+  .nav-links {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    background: white;
+  }
+  .link-item {
+    display: inline-block;
+    margin-top: 0;
+    margin-right: 2rem;
+  }
 }
 
 .dinero {
@@ -29,6 +185,7 @@
   color: white;
   font-size: 1em;
   padding: 15px 0px 0px 15px;
+  position: relative;
 }
 
 .dinero h2 {
@@ -65,8 +222,8 @@
   margin-right: 20px;
   width: 80px;
   border-radius: 5px;
-  border-color: var(--button-blue-qr);
-  background-color: var(--button-blue-qr);
+  border-color: var(--background-color-blue);
+  background-color: var(--background-color-blue);
   font-size: 0.9em;
   color: white;
 }
@@ -96,8 +253,8 @@ h3 {
   height: 50px;
   width: 100px;
   border-radius: 5px;
-  border-color: var(--button-blue-qr);
-  background-color: var(--button-blue-qr);
+  border-color: var(--background-color-blue);
+  background-color: var(--background-color-blue);
   font-size: 0.9em;
   color: white;
   margin-right: 20px;
