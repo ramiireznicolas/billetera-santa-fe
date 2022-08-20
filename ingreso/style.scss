@@ -7,11 +7,13 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    border: none;
+}
 //!menu hamburguesa
 .main-header {
     height: 50px;
-    width: 95%;
+    width: 100%;;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,13 +58,14 @@
     text-decoration: none;
     font-weight: bold;
     position: relative;
+    cursor: pointer;
 }
 
 .link-item::after {
     position: absolute;
     content: "";
     background-color: black;
-    bottom: -5px;
+    bottom: 0px;
     left: 0;
     width: 0%;
     height: 3px;
@@ -110,34 +113,6 @@
 
 .button-menu.close span:nth-child(3) {
     display: none;
-}
-
-@media screen and (min-width: 768px) {
-    .button-menu {
-        display: none;
-    }
-
-    .main-nav {
-        position: static;
-        margin-left: 0;
-        flex-basis: 70%;
-        height: 100%;
-    }
-
-    .nav-links {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-end;
-        background: white;
-    }
-
-    .link-item {
-        display: inline-block;
-        margin-top: 0;
-        margin-right: 2rem;
-    }
 }
 //! fin menu hamburguesa
 
@@ -197,10 +172,13 @@ h3 {
 
 .pagos {
     margin-left: 15px;
-    width: 320px;
+    max-width: 500px;
     overflow: scroll;
     position: relative;
     scroll-snap-type: x mandatory;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     .servicios {
         display: flex;
@@ -218,5 +196,39 @@ h3 {
             margin-right: 20px;
             scroll-snap-align: start;
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1{
+        z-index: 999;
+    }
+    .button-menu {
+        display: none;
+    }
+
+    .main-nav {
+        position: static;
+        margin-left: 0;
+        height: 100%;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: var(--background-color-blue);
+    }
+
+    .link-item {
+        display: block;
+        margin-top: 0;
+        margin-right: 2rem;
+        color: white;
+    }
+    img{
+        display: none;
     }
 }
