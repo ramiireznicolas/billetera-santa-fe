@@ -72,7 +72,7 @@ body {
 
 .link-item {
   margin-top: 2rem;
-  color: #444444;
+  color: #000000;
   text-decoration: none;
   font-weight: bold;
   position: relative;
@@ -89,10 +89,12 @@ body {
   height: 3px;
   -webkit-transition: 0.3s ease all;
   transition: 0.3s ease all;
+  color: black;
 }
 
 .link-item:hover::after {
   width: 100%;
+  color: black;
 }
 
 .button-menu {
@@ -157,6 +159,7 @@ body {
   font-size: 1em;
   padding: 15px 0px 0px 15px;
   position: relative;
+  max-width: 450px;
 }
 
 .dinero h2 {
@@ -236,6 +239,24 @@ h3 {
   scroll-snap-align: start;
 }
 
+.tarjetas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px 15px 10px;
+}
+
+.tarjetas button {
+  width: 60px;
+  height: 40px;
+  background-color: var(--background-color-blue);
+  color: white;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     z-index: 999;
@@ -250,6 +271,7 @@ h3 {
   }
   .nav-links {
     width: 100%;
+    height: 100%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -269,6 +291,7 @@ h3 {
     margin-top: 0;
     margin-right: 2rem;
     color: white;
+    position: relative;
   }
   img {
     display: none;

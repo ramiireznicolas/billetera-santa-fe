@@ -21,7 +21,7 @@ body {
         text-decoration: none;
         color: white;
         border-bottom: 1px solid white;
-        margin-right: 40%;
+        margin: 13px 40% 0 0;
     }
 
     form {
@@ -70,7 +70,7 @@ body {
         border: none;
         background: none;
         --primary-color: #ffff;
-        --hovered-color: #00558c;
+        --hovered-color: #cf2e2e;
         position: relative;
         display: flex;
         font-weight: 600;
@@ -117,7 +117,7 @@ body {
 
     button:hover svg {
         transform: translateX(4px);
-        color: var(--hovered-color)
+        color: var(--hovered-color);
     }
 
     button svg {
