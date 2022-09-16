@@ -1,3 +1,4 @@
+//MENU
 const toggleButton = document.getElementById("button-menu");
 const navWrapper = document.getElementById("nav");
 
@@ -10,4 +11,10 @@ navWrapper.addEventListener("click", e => {
     navWrapper.classList.remove("show");
     toggleButton.classList.remove("close");
   }
+});
+
+//PRELOADER
+const preloader = document.querySelector(".preloader");
+window.addEventListener("load", ()=>{
+  preloader.style.display = "none" ;
 });
