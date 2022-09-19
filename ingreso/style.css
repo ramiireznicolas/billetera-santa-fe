@@ -225,6 +225,41 @@
   display: none;
 }
 
+.modal_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 999;
+}
+
+.modal_container .modal_ {
+  background-color: #fff;
+  max-width: 600px;
+  padding: 30px 50px;
+  border-radius: 5px;
+  margin: auto 15px;
+  text-align: center;
+}
+
+.open_close {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .dinero {
   background-color: var(--background-color-blue);
   width: 100%;
@@ -239,7 +274,7 @@
 
 .dinero h2 {
   color: white;
-  margin: 10px 0px 0px 15px;
+  margin: 13px 0px 0px 15px;
 }
 
 .dinero .cajero {
