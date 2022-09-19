@@ -1,130 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,100&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-
-body {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(9, 13, 60);
-    display: flex;
-    flex-direction: column;
-
-    img {
-        margin: 10px auto 10px;
-        width: 100px;
-    }
-
-    a{
-        text-decoration: none;
-        color: white;
-        border-bottom: 1px solid white;
-        margin: 13px 40% 0 0;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-
-        .input {
-            line-height: 10px;
-            border: 2px solid transparent;
-            border-bottom-color: white;
-            padding: .2rem 0;
-            outline: none;
-            background-color: transparent;
-            color: #0d0c22;
-            transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
-
-            &:focus,
-            input:hover {
-                outline: none;
-                padding: .2rem 1rem;
-                border-radius: 1rem;
-                border-color: #7a9cc6;
-            }
-
-            &::placeholder {
-                color: white;
-            }
-
-            &:focus::placeholder {
-                opacity: 0;
-                transition: opacity .3s;
-            }
-        }
-
-        label {
-            color: white;
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto 7px auto;
-            width: 320px;
-        }
-    }
-
-    button {
-        margin: 10px auto;
-        border: none;
-        background: none;
-        --primary-color: #ffff;
-        --hovered-color: #cf2e2e;
-        position: relative;
-        display: flex;
-        font-weight: 600;
-        font-size: 20px;
-        gap: 0.5rem;
-        align-items: center;
-        p {
-           margin: 0;
-           position: relative;
-           font-size: 20px;
-           color: var(--primary-color);
-           
-           &::before {
-               position: absolute;
-               /*   box-sizing: border-box; */
-               content: "Crear cuenta!";
-               width: 0%;
-               inset: 0;
-               color: var(--hovered-color);
-               overflow: hidden;
-               transition: 0.3s ease-out;
-           }
-        }
-
-        &::after {
-            position: absolute;
-            content: "";
-            width: 0;
-            left: 0;
-            bottom: -7px;
-            background: var(--hovered-color);
-            height: 2px;
-            transition: 0.3s ease-out;
-        }
-
-        &:hover::after {
-            width: 100%;
-        }
-    }
-    
-    button:hover p::before {
-        width: 100%;
-    }
-
-    button:hover svg {
-        transform: translateX(4px);
-        color: var(--hovered-color);
-    }
-
-    button svg {
-        color: var(--primary-color);
-        transition: 0.2s;
-        position: relative;
-        width: 15px;
-        transition-delay: 0.2s;
-    }
+body{
+	text-align: center;
+	background-color: #142867;
+	color: white;
+	font-family: 'Barlow', sans-serif;
+	h1{
+		font-size: 1.4em;
+		margin: 10px 0 5px;
+	}
+	h2{
+		font-size: 1em;
+		margin: 10px 0 0;
+	}
+	select{
+		width: 250px;
+	}
+	.input {
+		line-height: 25px;
+		border: 2px solid transparent;
+		border-bottom-color: #777;
+		padding: .2rem 0;
+		outline: none;
+		background-color: transparent;
+		color: white;
+		transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+		&:focus::placeholder {
+			opacity: 0;
+			transition: opacity .3s;
+		}
+		&:focus,
+		input:hover {
+			outline: none;
+			padding: .2rem 1rem;
+			border-radius: 1rem;
+			border-color: #7a9cc6;
+		}
+		&::placeholder {
+			color: white;
+		}
+	}
+	.volver{
+		display: flex;
+		justify-content: space-around;
+		max-width: 380px;
+		margin: auto;
+		a{
+			text-decoration: none;
+			color: white;
+			border-bottom: 1px solid #777;
+			margin: 20px;
+		}
+	}
 }
